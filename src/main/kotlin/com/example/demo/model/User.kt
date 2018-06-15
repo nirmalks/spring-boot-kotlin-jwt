@@ -9,5 +9,5 @@ import javax.persistence.Id
  * Created by nirmal on 15/6/18.
  */
 @Entity
-data class User(@Id @GeneratedValue(strategy= GenerationType.IDENTITY) val id: Long,
-                val username: String , val password: String)
+data class User(@Id @GeneratedValue(strategy= GenerationType.IDENTITY) var id: Long,
+                var username: String , var password: String)
