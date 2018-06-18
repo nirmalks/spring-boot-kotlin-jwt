@@ -6,13 +6,13 @@ import org.springframework.context.annotation.Bean
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 
 @SpringBootApplication
-class KotlinJwtApplication
-
-fun main(args: Array<String>) {
-
+class KotlinJwtApplication {
     @Bean
     fun bCryptPasswordEncoder() : BCryptPasswordEncoder {
         return BCryptPasswordEncoder()
     }
+}
+
+fun main(args: Array<String>) {
     runApplication<KotlinJwtApplication>(*args)
 }
