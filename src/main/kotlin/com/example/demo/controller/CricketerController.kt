@@ -21,7 +21,7 @@ class CricketerController(private val cricketerService: CricketerService , priva
 	@GetMapping("/cricketers/{id}")
 	fun getCricketer(@PathVariable("id") id: Long):ResponseEntity<Cricketer>  {
 		val cricketer = cricketerService.findById(id)
-		return ResponseEntity<Cricketer>(cricketer as Cricketer, HttpStatus.OK);
+		return ResponseEntity<Cricketer>(cricketer as Cricketer, HttpStatus.OK)
 	}
 	
 	@GetMapping("/cricketers/")

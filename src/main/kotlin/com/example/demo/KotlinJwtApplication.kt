@@ -16,3 +16,4 @@ class KotlinJwtApplication {
 fun main(args: Array<String>) {
     runApplication<KotlinJwtApplication>(*args)
 }
+
