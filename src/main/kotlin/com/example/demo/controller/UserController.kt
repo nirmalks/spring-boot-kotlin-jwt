@@ -26,7 +26,7 @@ class UserController(@Autowired private val userRepository: UserRepository ,@Aut
 
     @PostMapping("/login")
     fun login(@RequestBody user: User): ResponseEntity<User> {
-        val cUser: User = userRepository.findByUsername(user.username)
+        val cUser: User? = userRepository.findByUsername(user.username)
         if(cUser != null && bCryptPasswordEncoder.matches(user.password,cUser.password)) {
             return ResponseEntity<User>(user, HttpStatus.OK)
         }
